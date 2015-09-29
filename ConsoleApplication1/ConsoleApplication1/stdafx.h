@@ -7,9 +7,12 @@
 
 #include "targetver.h"
 #include "Problem.h"
+#include "Util.h"
 
 #include <stdio.h>
 #include <tchar.h>
+#include <iostream>
+#include <algorithm>
 
 
 
