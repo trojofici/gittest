@@ -4,9 +4,10 @@
 
 int main()
 {
-	Problem* pb = new Problem3();
-	pb->init();
-	pb->run();
+	//Problem* pb = new Problem4();
+	//pb->init();
+	//pb->run();
+	Util::isPrime(10);
 	std::cout << "Run finished"<<std::endl;
 	int a;
 	std::cin>>a;

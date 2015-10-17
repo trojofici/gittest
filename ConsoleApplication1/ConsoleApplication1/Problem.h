@@ -4,8 +4,8 @@ class Problem
 public:
 	Problem();
 	~Problem();
-	virtual void init();
-	virtual void run();
+	virtual void init()=0;
+	virtual void run()=0;
 };
 
 class Problem1 :
@@ -36,5 +36,16 @@ public:
 	~Problem3();
 	void init();
 	void run();
+};
+
+class Problem4 :
+	public Problem
+{
+public:
+	Problem4();
+	~Problem4();
+	void init();
+	void run();
+	bool isPalindrome(int num);
 };
 
