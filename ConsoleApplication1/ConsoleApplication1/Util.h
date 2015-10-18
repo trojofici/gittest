@@ -13,7 +13,7 @@ protected:
 	static unsigned_integer findMaxFactorSimple(unsigned_integer num);
 	static unsigned_integer findMaxFactorSimple2(unsigned_integer num);
 public:
-	const static unsigned_integer int maxPrime = 100000000;
+	const static unsigned_integer int maxPrime = 2000000;
 	Util();
 	~Util();
 	static bool isPrime(unsigned_integer num) {

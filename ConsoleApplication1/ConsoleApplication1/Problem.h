@@ -49,3 +49,22 @@ public:
 	bool isPalindrome(int num);
 };
 
+class Problem7 :
+	public Problem
+{
+public:
+	Problem7();
+	~Problem7();
+	void init();
+	void run();
+};
+
+class Problem8 :
+	public Problem
+{
+public:
+	Problem8();
+	~Problem8();
+	void init();
+	void run();
+};
