@@ -1,4 +1,6 @@
 #pragma once
+#include "Util.h"
+
 class Problem
 {
 public:
@@ -65,6 +67,32 @@ class Problem8 :
 public:
 	Problem8();
 	~Problem8();
+	void init();
+	void run();
+};
+
+class Problem12: public Problem
+{
+private:
+	vector<unsigned_integer> numbers;
+public:
+	const static unsigned_integer maxNumber = 100000000;
+	//const static unsigned_integer maxNumber = 50;
+	Problem12();
+	~Problem12();
+	void init();
+	void run();
+};
+
+class Problem13 : public Problem
+{
+	static const int numberOfLines = 100;
+	//static const int numberOfLines = 2;
+	static const int numberOfDigits = 50;
+	int numbers[numberOfLines][numberOfDigits];
+public:
+	Problem13();
+	~Problem13();
 	void init();
 	void run();
 };
