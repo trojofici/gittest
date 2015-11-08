@@ -112,3 +112,71 @@ void Problem13::run()
 
 
 }
+
+int Problem14::length(unsigned_integer num)
+{
+	if (debug) cout << num << ',';
+	bool tooBig = !(num <maxNumber);
+	if (tooBig) {
+		if (num % 2 == 0) {
+			return length(num / 2)+1;
+		}
+		else {
+			return length(3 * num + 1)+1;
+		}
+	} 
+
+	if (numbers[num] != NOT_CALCULATED) return numbers[num];
+	if (num == 1) {
+		numbers[num] = 1;
+		return 1;
+	}
+	if (num%2==0) {
+		int l0 = length(num / 2);
+		numbers[num] = l0 + 1;
+	}
+	else {
+		int l0 = length(3*num +1);
+		numbers[num] = l0 + 1;
+	}
+	return numbers[num];
+}
+
+Problem14::Problem14()
+{
+}
+
+
+Problem14::~Problem14()
+{
+}
+
+void Problem14::init()
+{
+}
+
+void Problem14::run()
+{
+	for (unsigned_integer i = 0; i < maxNumber; i++)
+	{
+		numbers[i] = NOT_CALCULATED;
+	}
+	//numbers[1] = 1;
+	unsigned_integer maxStart = NOT_CALCULATED;
+	int maxLength = -1;
+	for (unsigned_integer i = minStartNumber; i < maxStartNumber; i++)
+	{
+		//if (i == 23529) debug = true;
+		if(debug) cout << endl<< "Calculating:" << i << endl;
+		int le = length(i);
+		if (debug) cout << endl << "Result:" << le << endl;
+		if (le > maxLength) {
+			maxLength = le;
+			maxStart = i;
+			cout << endl << "Replacing max:" << i << ", length:" << le << endl;
+		}
+	}
+
+}
+
+

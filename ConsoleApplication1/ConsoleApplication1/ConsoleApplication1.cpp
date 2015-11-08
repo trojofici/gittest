@@ -4,7 +4,7 @@
 
 int main()
 {
-	Problem* pb = new Problem13();
+	Problem* pb = new Problem14();
 	pb->init();
 	pb->run();
 	std::cout << "Run finished"<<std::endl;
