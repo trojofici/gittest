@@ -103,9 +103,9 @@ private:
 	bool debug = false;
 	int length(unsigned_integer num);
 	static const int NOT_CALCULATED = 1;
-	static const unsigned_integer maxNumber = 400000000;
+	static const unsigned_integer maxNumber = 40000000;
 	//static const unsigned_integer maxNumber = 2;
-	static const unsigned_integer maxStartNumber = 100000000;
+	static const unsigned_integer maxStartNumber = 1000000;
 	static const unsigned_integer minStartNumber = 1;
 	int numbers[maxNumber];
 public:
