@@ -29,13 +29,39 @@ void previousProblems() {
 	//std::cout << Util::over(33, 17) << std::endl;
 }
 
+int factorial(int num) {
+	int toReturn = 1;
+	for (int i = 2; i <= num; i++)
+	{
+		toReturn *= i;
+	}
+	return toReturn;
+}
+
+void problem24() {
+	int num = 2 * factorial(9);//[0-1]*
+	num += 6*factorial(8);//[2][0,1,3,4,5,6]*
+	num += 6*factorial(7);//[2][7][0,1,3,4,5,6]*
+	num += 2*factorial(6);//[2][7][8][0,1]*
+	num += 5*factorial(5);//[2][7][8][3][0,1,4,5,6]*
+	num += 1*factorial(4);//[2][7][8][3][9][0]*
+	num += 2*factorial(3);//[2][7][8][3][9][0][1,4]*
+	num += 2*factorial(2);//[2][7][8][3][9][0][5][1,4]*
+	//1,6
+	//2783905461
+	std::cout <<  num << std::endl;
+}
+
+
+
 
 int main()
 {
-	Problem* pb = new Problem21();
-	//pb->init();
+	problem24();
+	/*Problem* pb = new Problem21();
+	pb->init();
 	pb->run();
-	std::cout << "Run finished"<<std::endl;
+	std::cout << "Run finished"<<std::endl;*/
 	int a;
 	std::cin>>a;
 }
