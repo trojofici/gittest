@@ -40,6 +40,9 @@
     <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="bigint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -48,17 +51,11 @@
     <ClCompile Include="ConsoleApplication1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Problem.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Problem1.cpp">
       <Filter>Source Files\problems</Filter>
     </ClCompile>
     <ClCompile Include="Problem2.cpp">
       <Filter>Source Files\problems</Filter>
-    </ClCompile>
-    <ClCompile Include="Util.cpp">
-      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Problem3.cpp">
       <Filter>Source Files\problems</Filter>
@@ -67,6 +64,15 @@
       <Filter>Source Files\problems</Filter>
     </ClCompile>
     <ClCompile Include="Problem12.cpp">
+      <Filter>Source Files\problems</Filter>
+    </ClCompile>
+    <ClCompile Include="Util.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bigint.cpp">
       <Filter>Source Files\problems</Filter>
     </ClCompile>
   </ItemGroup>

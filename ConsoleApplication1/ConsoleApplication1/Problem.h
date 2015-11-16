@@ -6,7 +6,7 @@ class Problem
 public:
 	Problem();
 	~Problem();
-	virtual void init()=0;
+	virtual void init();
 	virtual void run()=0;
 };
 
@@ -112,5 +112,34 @@ public:
 	Problem14();
 	~Problem14();
 	void init();
+	void run();
+};
+
+
+class Problem18 : public Problem
+{
+protected:
+	static const int numberOfLines = 15;
+	int numbers[numberOfLines][numberOfLines];
+	int sums[numberOfLines][numberOfLines];
+public:
+	Problem18();
+	~Problem18();
+	void init();
+	void run();
+};
+
+class Problem21 : public Problem
+//and 23
+{
+protected:
+	//static const int numberOfNumbers =1000000;//21
+	//static const int topNumber = 10000;//21
+	static const int numberOfNumbers = 28123;//23
+	static const int topNumber = numberOfNumbers;//23
+	//static const int topNumber = 30;//23
+	unsigned_integer numbers[numberOfNumbers];
+public:
+	Problem21();
 	void run();
 };

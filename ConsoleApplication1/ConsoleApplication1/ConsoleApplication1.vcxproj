@@ -142,6 +142,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="bigint.h" />
     <ClInclude Include="Problem.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="stdafx.h" />
@@ -149,6 +150,7 @@
     <ClInclude Include="Util.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="bigint.cpp" />
     <ClCompile Include="ConsoleApplication1.cpp" />
     <ClCompile Include="Problem.cpp" />
     <ClCompile Include="Problem1.cpp" />
