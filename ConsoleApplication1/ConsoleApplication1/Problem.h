@@ -1,5 +1,6 @@
 #pragma once
 #include "Util.h"
+#include "bigint.h"
 
 class Problem
 {
@@ -141,5 +142,16 @@ protected:
 	unsigned_integer numbers[numberOfNumbers];
 public:
 	Problem21();
+	void run();
+};
+
+
+class Problem26 : public Problem
+{
+protected:
+	static const int maxD = 10;
+public:
+	Problem26();
+	~Problem26();
 	void run();
 };

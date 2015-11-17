@@ -6,8 +6,8 @@
 #pragma once
 
 #include "targetver.h"
-#include "Problem.h"
 #include "bigint.h"
+#include "Problem.h"
 #include "Util.h"
 
 #include <stdio.h>

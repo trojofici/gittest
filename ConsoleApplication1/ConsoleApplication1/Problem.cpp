@@ -146,3 +146,53 @@ void Problem21::run()
 	cout << "sum:" << sum << endl;
 
 }
+
+
+//Problem26::max9 = Dodecahedron::Bigint("999999999999999999999999999999999");
+
+Problem26::Problem26()
+{
+}
+
+Problem26::~Problem26()
+{
+}
+void Problem26::run()
+{
+	int maxPeriodNumber = 0;
+	int maxPeriodLength = 0;
+	for (int number = 2; number < 1000; number++)
+	{
+		std::vector<int> remainders;
+		int result = pow(10, (int)(log10(number) + 0.5));
+		//cout << result << endl;
+		//cout << number << ":";
+		while (true) {
+			int remainder = result % number;
+			if (remainder == 0) {
+				//not periodic
+				break;
+			}
+			//cout << (result / number);
+			result = remainder * 10;
+			//int remainderPosition = std::find(remainders.begin(), remainders.end(), remainder);
+			if (std::find(remainders.begin(), remainders.end(), remainder) != remainders.end()) {
+				int periodLength = remainders.size();
+				//cout << "period length:" << periodLength;
+				if (periodLength > maxPeriodLength) {
+					maxPeriodLength = periodLength;
+					maxPeriodNumber = number;
+					cout << "Max length:" << maxPeriodLength <<", number:"<< maxPeriodNumber<<endl;
+				}
+				break;
+			}
+			remainders.push_back(remainder);
+		}
+		//cout << endl;
+	}
+
+	
+
+
+	
+}

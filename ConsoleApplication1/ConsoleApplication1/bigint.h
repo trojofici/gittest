@@ -32,6 +32,7 @@ public:
     Bigint &operator-=(Bigint const &);
 
     //Multiplication
+	Bigint operator%(Bigint const &);
     Bigint operator*(Bigint const &);
     Bigint &operator*=(Bigint const &);
     Bigint operator*(long long const &);
