@@ -34,7 +34,7 @@ Bigint::Bigint(long long value)
 
 Bigint::Bigint(std::string stringInteger)
 {
-    int size = stringInteger.length();
+    int size = (int)stringInteger.length();
 
     positive = (stringInteger[0] != '-');
 
@@ -186,7 +186,7 @@ Bigint Bigint::operator*(Bigint const &b)
     Bigint c;
     for (it1 = number.begin(); it1 != number.end(); ++it1) {
         for (it2 = b.number.begin(); it2 != b.number.end(); ++it2) {
-            c.skip = (unsigned int) (it1 - number.begin()) + (it2 - b.number.begin()); //TODO
+            c.skip = (unsigned_integer) (it1 - number.begin()) + (it2 - b.number.begin()); //TODO
             c += (long long) (*it1) * (*it2);
         }
     }
@@ -263,7 +263,7 @@ int Bigint::compare(const Bigint &a) const //0 this == a || -1 this < a || 1 thi
 
     if (number.size() < a.number.size()) return -1 * check;
     if (number.size() > a.number.size()) return check;
-    for (int i=number.size() - 1; i >= 0; i--) { //TODO
+    for (int i=(int)number.size() - 1; i >= 0; i--) { //TODO
         if (number[i] < a.number[i]) return -1 * check;
         if (number[i] > a.number[i]) return check;
     }
@@ -321,7 +321,7 @@ int Bigint::operator[](int const &b)
 //Trivia
 int Bigint::digits() const
 {
-    int segments = number.size();
+    int segments = (int)number.size();
 
     if (segments == 0) return 0;
 

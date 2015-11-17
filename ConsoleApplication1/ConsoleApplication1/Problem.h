@@ -155,3 +155,12 @@ public:
 	~Problem26();
 	void run();
 };
+
+class Problem28 : public Problem
+{
+protected:
+	static const int gridSize = 5;
+	int numbers[gridSize][gridSize];
+public:
+	void run();
+};

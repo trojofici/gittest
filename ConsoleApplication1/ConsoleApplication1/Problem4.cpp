@@ -48,7 +48,7 @@ bool Problem4::isPalindrome(int num)
 	char c[16];
 	std::sprintf(c, "%d", num);
 	std::string str(c);// = std::string(c);
-	int le = str.length();
+	int le = (int)str.length();
 	for (int i = 0; i < le/2; i++)
 	{
 		if (str.at(i) != str.at(le-i-1)) return false;

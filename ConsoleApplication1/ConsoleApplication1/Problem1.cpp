@@ -111,7 +111,7 @@ void Problem8::run()
 	{
 		for (int b = a; b < 500; b++)
 		{
-			int c = sqrt(a*a + b*b);
+			int c = (int)sqrt(a*a + b*b);
 			int as = a*a;
 			// && (a*a+b*b=c*c)
 			if(a+b+c==1000 && a*a + b*b == c*c) {

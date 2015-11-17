@@ -58,7 +58,7 @@ void problem24() {
 int main()
 {
 	//problem24();
-	Problem* pb = new Problem26();
+	Problem* pb = new Problem28();
 	pb->init();
 	pb->run();
 	std::cout << "Run finished"<<std::endl;

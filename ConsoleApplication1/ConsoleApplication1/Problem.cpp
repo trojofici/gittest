@@ -129,7 +129,7 @@ void Problem21::run()
 			if (2 * v.at(j)>i) {
 				break;
 			}
-			int numba = i - v.at(j);
+			unsigned_integer numba = i - v.at(j);
 			if(abundant[numba]) {
 				//cout << "found:" << i << ":"<< v.at(j) <<":"<< numba << endl;
 				found = true;
@@ -164,7 +164,7 @@ void Problem26::run()
 	for (int number = 2; number < 1000; number++)
 	{
 		std::vector<int> remainders;
-		int result = pow(10, (int)(log10(number) + 0.5));
+		int result = (int)pow(10, (int)(log10(number) + 0.5));
 		//cout << result << endl;
 		//cout << number << ":";
 		while (true) {
@@ -177,7 +177,7 @@ void Problem26::run()
 			result = remainder * 10;
 			//int remainderPosition = std::find(remainders.begin(), remainders.end(), remainder);
 			if (std::find(remainders.begin(), remainders.end(), remainder) != remainders.end()) {
-				int periodLength = remainders.size();
+				int periodLength = (int)remainders.size();
 				//cout << "period length:" << periodLength;
 				if (periodLength > maxPeriodLength) {
 					maxPeriodLength = periodLength;
@@ -195,4 +195,11 @@ void Problem26::run()
 
 
 	
+}
+
+void Problem28::run()
+{
+
+
+
 }
