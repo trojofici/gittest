@@ -199,7 +199,53 @@ void Problem26::run()
 
 void Problem28::run()
 {
+	int cycleCount = (gridSize - 1) / 2;
+	int center = (gridSize - 1) / 2;
+	cout <<"grid size:"<<gridSize << ", center:" << center << ", cycleCount:" << cycleCount << endl;
+	int value = 1;
+	numbers[center][center] = value++;
+	for (size_t cycle = 0; cycle < cycleCount; cycle++)
+	{
+		numbers[center - cycle][center + cycle + 1] = value++;
+		for (size_t j = 0; j < 2* cycle +1; j++)
+		{
+			numbers[center - cycle + 1 +j][center + cycle + 1] = value++;
+		}
+		for (size_t j = 0; j < 2 * cycle + 2; j++)
+		{
+			numbers[center + cycle+1][center + cycle -j] = value++;
+		}
+		for (size_t j = 0; j < 2 * cycle + 2; j++)
+		{
+			numbers[center + cycle -j][center - cycle-1] = value++;
+		}
+		for (size_t j = 0; j < 2 * cycle + 2; j++)
+		{
+			numbers[center - cycle- 1][center - cycle +j] = value++;
+		}
+	}
 
+
+	for (size_t i = 0; i < gridSize; i++)
+	{
+		for (size_t j = 0; j < gridSize; j++)
+		{
+			//cout << numbers[i][j]<<"\t\t";
+		}
+		//cout << endl<<endl;
+	}
+
+	int sum = 0;
+	for (size_t i = 0; i < gridSize; i++)
+	{
+
+		sum += numbers[i][i];
+		cout << numbers[i][i] << endl;
+		sum += numbers[i][gridSize-i-1];
+		cout << numbers[i][gridSize - i - 1]<<endl;
+	}
+	sum -= numbers[center][center];
+	cout << "Sum:"<<sum << endl;
 
 
 }

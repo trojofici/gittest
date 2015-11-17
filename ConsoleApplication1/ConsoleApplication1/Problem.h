@@ -159,7 +159,7 @@ public:
 class Problem28 : public Problem
 {
 protected:
-	static const int gridSize = 5;
+	static const int gridSize = 1001;
 	int numbers[gridSize][gridSize];
 public:
 	void run();
