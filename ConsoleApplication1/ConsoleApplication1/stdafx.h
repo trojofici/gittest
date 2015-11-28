@@ -6,6 +6,7 @@
 #pragma once
 
 #include "targetver.h"
+#include "bigint.h"
 #include "Problem.h"
 #include "Util.h"
 
@@ -17,6 +18,7 @@
 #include <array>
 #include <fstream>
 #include <string>
+#include <sstream>
 
 
 
